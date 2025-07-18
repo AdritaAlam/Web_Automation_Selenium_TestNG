@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/CSE/SQA/Web Automation Projects/WebAutomation_POM/src/test/java/testcases">
+        <classes>
+            <class name="testcases.TestHomePage">
+                <methods>
+                    <include name="TestHomePageTitle"/>
+                    <include name="TestLoginSignupButton"/>
+                    <include name="TestContactUsButton"/>
+                </methods>
+            </class>
+            <class name="testcases.TestLoginPage">
+                <methods>
+                    <include name="TestLoginWithValidCredentials"/>
+                    <include name="TestLoginWithValidEmailAndInvalidPassword"/>
+                    <include name="TestLoginWithInValidCredentials"/>
+                    <include name="TestLoginWithInValidEmailAndValidPassword"/>
+                    <include name="TestLoginWithoutEmailPassword"/>
+                    <include name="TestLoginEmailWithoutPassword"/>
+                    <exclude name="TestLoginWithInvalidCredentials"/>
+                </methods>
+            </class>
+            <class name="testcases.WebTest">
+                <methods>
+                    <include name="testPageTitle"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
